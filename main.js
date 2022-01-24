@@ -4,6 +4,9 @@ function myFunction(){
     let età = document.getElementById("age").value;
     let jkm= document.getElementById("km").value;
     if(jname != ""){
+        let ticket = document.getElementById("ticket");
+        if(ticket.classList.contains(`d-none`))
+            ticket.classList.remove(`d-none`);
         document.getElementById("n-place").innerHTML = Math.floor(Math.random() * 9) + 1
         document.getElementById("code-cp").innerHTML = Math.floor(Math.random() * 9999) + 90000
         let prezzo_km_tot= `${jkm}`*0.21;
@@ -36,8 +39,7 @@ function myFunction(){
 }
 
 function reset(){
-    let reset= ""
-    
+    let reset= ""  
     document.getElementById("name").innerHTML = reset
     document.getElementById("price").innerHTML = reset
     document.getElementById("text-name").value = reset
@@ -45,6 +47,9 @@ function reset(){
     document.getElementById("n-place").innerHTML = reset 
     document.getElementById("code-cp").innerHTML = reset
     document.getElementById("age").value = `select`
+    let ticket = document.getElementById("ticket");
+        if(!ticket.classList.contains(`d-none`))
+            ticket.classList.add(`d-none`)
 }
 
 
