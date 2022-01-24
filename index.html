@@ -16,27 +16,27 @@
             <div class="col-12 text-center">
                 <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
             </div>
-            <div class="col-12  text-center justify-content-center bg-white rounded-3">
-                <div class="row justify-content-center">
+            <div class="col-12  text-center justify-content-center bg-white rounded-20px ">
+                <div class="row justify-content-center pink my-2">
                     <div class="col-3">
-                        <h4>Nome Cognome</h4>
+                        <h5>Nome Cognome</h5>
                     </div>
                     <div class="col-3">
-                        <h4>Km da percorrere</h4>
+                        <h5>Km da percorrere</h5>
                     </div>
                     <div class="col-3">
-                        <h4>Fascia d'età</h4>
+                        <h5>Fascia d'età</h5>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-3">
-                        <input type="text" id="text-name" name="name">
+                        <input type="text" id="text-name" name="name" class="bpink rounded-3 text-center">
                     </div>
                     <div class="col-3">
-                        <input type="text" id="km" name="km">
+                        <input type="text" id="km" name="km" class="bpink rounded-3 text-center">
                     </div>
                     <div class="col-3">
-                        <select id="age" name="age">
+                        <select id="age" name="age" class="bpink rounded-3 bg-white">
                             <option value="select">Seleziona la tua età</option>
                             <option value="minorenne">Minorenne</option>
                             <option value="maggiorenne">Maggiorenne</option>
@@ -45,43 +45,43 @@
                     </div>
                 </div>
             
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <button onclick="myFunction()">Genera</button>
-                        <button onclick="reset()">Annulla</button>
+                <div class="row justify-content-center my-4">
+                    <div class="col-4 mt-4 mb-1">
+                        <button class="rounded-2 px-2 pink bg-button text-bold" onclick="myFunction()">Genera</button>
+                        <button class="rounded-2 px-2 pink bg-button text-bold" onclick="reset()">Annulla</button>
                     </div>
                                
                 </div>
             </div>
-            <div id="ticket" class="row pd-none d-none">
+            <div id="ticket" class="row pd-none d-none mt-4">
                 <div class="col-12 text-center">
                     <h1>IL TUO BIGLIETTO</h1>
                 </div>
                 <div class="col-12 bg-white">
                     <div class="row justify-content-center">
                         <div class="col-12">
-                            <h3>DETTAGLIO PASSEGGERI</h3>
+                            <h5 class="text-bold">DETTAGLIO PASSEGGERI</h5>
                         </div>
 
                         <div class="row border-top border-bottom br-grey border-3 pd-none">
                             <div class="col-4 bg-grey">
-                                <h3>NOME PASSEGGERO</h3>
-                                <P id="name"></P>
+                                <h5 class="text-bold">NOME PASSEGGERO</h5>
+                                <P class="text-bold" id="name"></P>
                             </div>
                             <div class="col-2">
-                                <p>Offerta</p>
+                                <p class="text-bold">Offerta</p>
                                 <P id="type-ticket"></P>
                             </div>
                             <div class="col-2">
-                                <p>Carrozza</p>
+                                <p class="text-bold">Carrozza</p>
                                 <P id="n-place"></P>
                             </div>
                             <div class="col-2">
-                                <p>Codice CP</p>
+                                <p class="text-bold">Codice CP</p>
                                 <P id="code-cp"></P>
                             </div>
                             <div class="col-2">
-                                <p>Costo biglietto</p>
+                                <p class="text-bold">Costo biglietto</p>
                                 <P id="price"></P>
                             </div>
                         </div>

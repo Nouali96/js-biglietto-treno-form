@@ -1,19 +1,17 @@
-
 function myFunction(){
     let jname= document.getElementById("text-name").value;
     let età = document.getElementById("age").value;
     let jkm= document.getElementById("km").value;
     if(jname != ""){
         let ticket = document.getElementById("ticket");
-        if(ticket.classList.contains(`d-none`))
-            ticket.classList.remove(`d-none`);
-        document.getElementById("n-place").innerHTML = Math.floor(Math.random() * 9) + 1
-        document.getElementById("code-cp").innerHTML = Math.floor(Math.random() * 9999) + 90000
-        let prezzo_km_tot= `${jkm}`*0.21;
+        ViewTicket(ticket);
+        document.getElementById("n-place").innerHTML = RandomNr(1, 9);
+        document.getElementById("code-cp").innerHTML = RandomNr(90000, 99999);
+        let prezzo_km_tot= CalcPrice(jkm);
         document.getElementById("name").innerHTML = jname
         switch(età){
             case "minorenne":
-                let sconto20= `${prezzo_km_tot}`-(`${prezzo_km_tot}`/100*20)    
+                let sconto20= CalcDiscount(prezzo_km_tot, 20)    
                 document.getElementById("price").innerHTML = `${sconto20.toFixed(2)} €`;
                 document.getElementById("type-ticket").innerHTML = `Biglietto scontato 20%`;
                 break;
@@ -24,7 +22,7 @@ function myFunction(){
                 break;
             
             case "over65":
-                let sconto40= `${prezzo_km_tot}`-(`${prezzo_km_tot}`/100*40)
+                let sconto40= CalcDiscount(prezzo_km_tot, 40)
                 document.getElementById("price").innerHTML = `${sconto40.toFixed(2)} €`;
                 document.getElementById("type-ticket").innerHTML = `Biglietto scontato 40%`;
                 break;
@@ -37,6 +35,26 @@ function myFunction(){
     }
 
 }
+
+function ViewTicket(element){
+    if(element.classList.contains(`d-none`))
+        element.classList.remove(`d-none`);
+}
+
+function CalcPrice(km){
+    return km * 0.21
+}
+
+function CalcDiscount(price, discount){
+    return price-(price/100*discount)
+}
+
+
+function RandomNr(start, end){
+    end -= start;
+    return Math.floor(Math.random() * end) + start;
+}
+
 
 function reset(){
     let reset= ""  

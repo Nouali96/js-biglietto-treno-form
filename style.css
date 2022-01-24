@@ -21,3 +21,27 @@
     border-color: grey!important;
 }
 
+.rounded-20px{
+    border-radius: 20px;
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+}
+
+.pink{
+    color: #B91450;
+}
+
+.bpink{
+    border-color: #B91450!important;
+}
+
+.bg-button{
+    background-color: #CCCCCC;
+}
+
+.text-bold{
+    font-weight: bold;
+}
