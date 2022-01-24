@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #B91450;
+}
+
+.bg-grey{
+    background-color: grey;
+}
+
+.pd-none{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.br-grey{
+    border-color: grey!important;
+}

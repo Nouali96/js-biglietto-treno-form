@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Biglietto treno</title>
+</head>
+<body>
+    <div class="container px-5 py-5">
+        <div class="row justify-content-center mx-5 my-5">
+            <div class="col-12 text-center">
+                <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            </div>
+            <div class="col-12  text-center justify-content-center bg-white">
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <h4>Nome Cognome</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Km da percorrere</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Fascia d'età</h4>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <input type="text" id="text-name" name="name">
+                    </div>
+                    <div class="col-3">
+                        <input type="text" id="km" name="km">
+                    </div>
+                    <div class="col-3">
+                        <select id="age" name="age">
+                            <option value="select">Seleziona la tua età</option>
+                            <option value="minorenne">Minorenne</option>
+                            <option value="maggiorenne">Maggiorenne</option>
+                            <option value="over65">Over65</option>
+                          </select>
+                    </div>
+                </div>
+            
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <button onclick="myFunction()">Genera</button>
+                        <button onclick="reset()">Annulla</button>
+                    </div>
+                               
+                </div>
+            </div>
+            <div class="row pd-none">
+                <div class="col-12 text-center">
+                    <h1>IL TUO BIGLIETTO</h1>
+                </div>
+                <div class="col-12 bg-white">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <h3>DETTAGLIO PASSEGGERI</h3>
+                        </div>
+
+                        <div class="row border-top border-bottom br-grey border-3 pd-none">
+                            <div class="col-4 bg-grey">
+                                <h3>NOME PASSEGGERO</h3>
+                                <P id="name"></P>
+                            </div>
+                            <div class="col-2">
+                                <p>Offerta</p>
+                                <P id="type-ticket"></P>
+                            </div>
+                            <div class="col-2">
+                                <p>Carrozza</p>
+                                <P id="n-place"></P>
+                            </div>
+                            <div class="col-2">
+                                <p>Codice CP</p>
+                                <P id="code-cp"></P>
+                            </div>
+                            <div class="col-2">
+                                <p>Costo biglietto</p>
+                                <P id="price"></P>
+                            </div>
+                        </div>
+                    </div>
+               </div>        
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="main.js">
+        
+    </script>
+</body>
+</html>
