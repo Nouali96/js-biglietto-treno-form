@@ -2,7 +2,7 @@ function myFunction(){
     let jname= document.getElementById("text-name").value;
     let età = document.getElementById("age").value;
     let jkm= document.getElementById("km").value;
-    if(jname != ""){
+    if(jname != "" && jkm != "" && età != "select"){
         let ticket = document.getElementById("ticket");
         ViewTicket(ticket);
         document.getElementById("n-place").innerHTML = RandomNr(1, 9);
@@ -69,5 +69,3 @@ function reset(){
         if(!ticket.classList.contains(`d-none`))
             ticket.classList.add(`d-none`)
 }
-
-
